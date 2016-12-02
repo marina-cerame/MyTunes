@@ -1,0 +1,17 @@
+body {
+  background-image: url('http://saintheron.com/wp-content/uploads/2016/05/aaliyah.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  background-color: #9fbcea;
+}
+
+div {
+  width: 750px;
+  padding: 15px;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 10px;
+  margin: auto;
+  font-family: 'Cabin', sans-serif;
+}
