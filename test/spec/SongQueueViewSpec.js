@@ -35,4 +35,19 @@ describe('SongQueueView', function() {
     expect(view.render).to.have.been.called;
   });
 
+  it('should remove songs from queue when clicked', function() {
+    view = new SongQueueView({collection: fakeSongs});
+    model = new SongModel();
+    sinon.spy(SongModel.prototype, 'dequeue');
+
+    view.$el.children().children().first().click();
+
+    expect(model.dequeue).to.have.been.called;
+  });
+  it('should remove songs from view when clicked', function() {
+    view = new SongQueueView({collection: fakeSongs});
+    view.$el.children().children().first().click();
+    expect(view.$el.children().children().length).to.equal(1);
+  });
+
 });
